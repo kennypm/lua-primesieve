@@ -43,8 +43,7 @@ print(it) -- __tostring metamethod will print either current prime or 'nil' if i
 ```
 
 ## Building
-I haven't bothered including an install script to find the system directory for Lua C libraries. First you'll need to install primesieve itself, either from the git repo or your package manager. Otherwise it's a typical CMake build process:
-
+The simplest way is to use LuaRocks to build, install, and manage your `LUA_CPATH`. Otherwise you can build manually with CMake:
 ```shell
 git clone https://github.com/kennypm/lua-primesieve/
 cd lua-primesieve
