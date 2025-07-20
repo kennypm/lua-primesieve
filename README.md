@@ -23,8 +23,7 @@ ps.count_primes(min, max) -- count the number of primes between 'min' and 'max'
 ### The `iterator` class
 Direct access to the iterator used to generate primes is provided by the following functions. The primesieve [docs](https://github.com/kimwalisch/primesieve/blob/master/doc/CPP_API.md) note that this is "not ideal if you are repeatedly iterating over the same primes in a loop" and recommend generating a lookup table with `primes()` or `n_primes()` in such cases. For more specific details, consult the original docs.
 ```lua
-it = ps.iterator.new() -- constructor for the iterator class
-it = ps.iterator() -- same thing
+it = ps.iterator() -- constructor for the iterator class
 it = ps.iterator(start) -- initializes iterator to 'start' number
 it = ps.iterator(start, stop_hint) -- only buffers primes up to 'stop_hint'
 

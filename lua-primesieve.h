@@ -51,7 +51,6 @@ int iterator_sub(lua_State *L);
 int iterator_tostring(lua_State *L);
 int iterator_gc(lua_State *L);
 // constructor
-extern luaL_Reg iterator_class[3];
 int iterator_new(lua_State *L);
 
 int luaopen_primesieve(lua_State *L);
