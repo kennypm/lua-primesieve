@@ -5,7 +5,8 @@
 
 /*
 ** to-do:
-** portability to Lua 5.3 (and 5.1?)
+** Lua 5.1 compatibility
+** account for lua_Integer types in primesieve_array, primes(), n_primes()
 ** primesieve_get_max_stop?? (UINT64_MAX > DBL_MAX)
 */
 
@@ -21,7 +22,7 @@ int primes(lua_State *L) {
     int top = lua_gettop(L);
     if( !(0 < top && top < 3) )
         return luaL_error(L, "%s(): expects 1 or 2 arguments", __func__);
-    if( top == 1) {
+    if( top == 1 ) {
         start = 0;
         stop = luaL_checkinteger(L, 1);
     } else {

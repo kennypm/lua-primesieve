@@ -7,6 +7,11 @@
 #include "lauxlib.h"
 #include <primesieve.h>
 
+#if LUA_VERSION_NUM < 504
+#define lua_newuserdatauv(L, size, nuvalue) \
+        lua_newuserdata(L, size)
+#endif
+
 typedef struct primesieve_array {
 	size_t size;
 	lua_Integer *primes;

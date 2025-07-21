@@ -1,6 +1,6 @@
 # lua-primesieve
 ### Lua bindings for [primesieve](https://github.com/kimwalisch/primesieve/), a library for fast prime number generation
-I originally wrote this to faciliate some just intonation work in Pure Data without requiring a hard-coded prime limit. I don't need it for myself anymore but I sought to make it feature complete and analogous to the library's C++ API. Currently only supports Lua 5.4; 5.3 compatibility wouldn't take much. 5.1 might be a little more involved since this code makes frequent use of the integer type. Pull requests welcome.
+I originally wrote this to faciliate some just intonation work in Pure Data without requiring a hard-coded prime limit. I don't need it for myself anymore but I sought to make it feature complete and analogous to the library's C++ API. Currently supports Lua >= 5.3. 5.1 compatibility is on the agenda. Pull requests welcome.
 
 ## Usage
 The primesieve [documentation](https://github.com/kimwalisch/primesieve/blob/master/doc/CPP_API.md) only outlines the following functions. There are more in the library that also have bindings here; their usage should be self-explanatory and can be found by reading the source.
